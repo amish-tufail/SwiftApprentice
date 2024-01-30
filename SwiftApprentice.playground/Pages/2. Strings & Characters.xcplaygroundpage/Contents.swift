@@ -43,7 +43,7 @@ print(stringOne)
 // 6. SubString
 let e = stringOne.firstIndex(of: "E")
 
-print(stringOne[e!])
+print(stringOne[...e!])
 
 
 // 7. SUFFIX and PREFIX

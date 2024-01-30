@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' buildActiveScheme='true' executeOnSourceChanges='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Basics'/>
         <page name='2. Strings &amp; Characters'/>
+        <page name='3. Collection Types'/>
+        <page name='4. Control Flow'/>
     </pages>
 </playground>
