@@ -7,6 +7,7 @@
         <page name='4. Control Flow'/>
         <page name='5. Functions'/>
         <page name='6. Closures'/>
+        <page name='7. Enumerations'/>
         <page name='8. Structures &amp; Classes'/>
     </pages>
 </playground>
