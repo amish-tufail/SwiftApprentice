@@ -107,3 +107,11 @@ func display(_ value: @autoclosure () -> (String)) {
 }
 
 display("Hello World!")
+
+func sub(a: Int, b: (Int) -> ()) {
+    b(a+4)
+}
+
+sub(a: 5) { v in
+    print(v)
+}
