@@ -27,9 +27,9 @@ let tuple = (1, 2)
 // VALUE BINDING:
 
 switch tuple {
-case (let x, 0): // here second value must b 0 first can be anything
+case (let x, 0): // here second value must be 0 first can be anything
     print("\(x) is executedddddd")
-case (0, let y): // here first value must b 0 second can be anything
+case (0, let y): // here first value must be 0 second can be anything
     print("\(y) is executed")
 case (let x, let y) : // here any value
     print("\(x) \(y) is executed")

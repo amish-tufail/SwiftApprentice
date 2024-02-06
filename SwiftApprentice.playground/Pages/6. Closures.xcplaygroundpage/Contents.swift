@@ -22,7 +22,7 @@
 ////}
 ////
 //// 2.
-////{ (a: String, b: String) -> Bool in
+////{ (a: String, b: String) -> Bool in // Closure
 ////    return true
 ////}
 ////
@@ -71,7 +71,7 @@
 
 // AUTOCLOSURES:
 
-let debug = true
+//let debug = true
 
 //func display(_ v: String) {
 //    if debug == true {
@@ -100,18 +100,33 @@ let debug = true
 
 // we use @autoclousre
 
-func display(_ value: @autoclosure () -> (String)) {
-    if debug == true {
-        print("\(value())")
-    }
-}
+//func display(_ value: @autoclosure () -> (String)) {
+//    if debug == true {
+//        print("\(value())")
+//    }
+//}
+//
+//display("Hello World!")
+//
+//func sub(a: Int, b: (Int) -> ()) {
+//    b(a+4)
+//}
+//
+//sub(a: 5) { v in
+//    print(v)
+//}
 
-display("Hello World!")
 
-func sub(a: Int, b: (Int) -> ()) {
-    b(a+4)
-}
 
-sub(a: 5) { v in
-    print(v)
-}
+//func v(a: Int, b: (Int) -> (Int)) {
+//    b(a + 10)
+//}
+//
+//var i: Int = 0
+//v(a: 10) { value in
+//    i = value
+//    return value
+//}
+//
+//print(i)
+

@@ -10,7 +10,7 @@ import Foundation
 // Classes are reference type
 
 class Student {
-    var name = ""
+    var name: String = ""
 }
 
 let stu1 = Student()

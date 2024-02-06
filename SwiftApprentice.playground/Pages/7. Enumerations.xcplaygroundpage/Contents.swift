@@ -8,6 +8,7 @@ enum DaysOfWeek: String, CaseIterable {
 
 var enum1: DaysOfWeek = .monday
 
+print(enum1)
 print(enum1.rawValue.uppercased())
 print("-----")
 
@@ -54,12 +55,9 @@ case .friday:
 case .saturday:
     print("A")
 }
-
-
-
 enum DaysOfWeekThree: String {
     case sunday
-    case monday
+    case monday = "MMMMMM"
     case tuesday
     case wednesday
     case thursday

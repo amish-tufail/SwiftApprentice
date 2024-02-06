@@ -9,5 +9,6 @@
         <page name='6. Closures'/>
         <page name='7. Enumerations'/>
         <page name='8. Structures &amp; Classes'/>
+        <page name='9. Properties'/>
     </pages>
 </playground>
