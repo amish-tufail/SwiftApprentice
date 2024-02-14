@@ -77,3 +77,26 @@ var ee = Examplee()
 
 //ee.display()
 Examplee.display()
+
+
+class New {
+    func valueReturn() -> String {
+        return "Value"
+    }
+    
+    @discardableResult
+    func valueReturn2() -> String {
+        return "Value"
+    }
+}
+
+var new = New()
+
+new.valueReturn() // So, this will say result is unused as we are returning a value, to fix this we do
+_ = new.valueReturn() // Good approach but sometimes we can ignore return value by using @discardableResult
+
+new.valueReturn2() // We ignore but below we can also
+// And we can use the value as well
+var n = new.valueReturn2()
+
+print(n)
