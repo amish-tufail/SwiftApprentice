@@ -46,3 +46,34 @@ u.change()
 u.change()
 u.x
 
+
+// Type Method
+
+class Example {
+    // You can use both static or class
+    
+    class func display() {
+        print("Type Method")
+    }
+    
+//    or
+    
+    static func display2() {
+        print("Type Method")
+    }
+}
+
+var e = Example()
+//e.display()
+Example.display()
+
+struct Examplee {
+    static func display() {
+        print("Type Method!")
+    }
+}
+
+var ee = Examplee()
+
+//ee.display()
+Examplee.display()
