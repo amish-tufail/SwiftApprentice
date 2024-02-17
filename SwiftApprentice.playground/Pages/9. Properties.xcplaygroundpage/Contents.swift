@@ -24,6 +24,7 @@ class Uni {
         set(passedValue) { // Custom name
             gpa = gpa + passedValue
         }
+        // Without Custom Name
 //        set {
 //            gpa = gpa + newValue // Default name for value **newValue**
 //        }
@@ -36,6 +37,7 @@ print(uni1.calculate) // No set so, 20.0
 
 uni1.calculate = 10.0 // Set value
 print(uni1.calculate) // So, now 30.0
+print(uni1.gpa)
 
 // Property Observer
 
