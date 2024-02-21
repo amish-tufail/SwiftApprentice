@@ -103,52 +103,77 @@
 
 // Failable Init
 
-struct Animal {
-    let species: String
-    init?(species: String) { // so, ? indicates that this init might fail and if fail returns nil, and if succeed then return an optional instance
-        if species.isEmpty {
-            return nil
-        }
-        self.species = species
+//struct Animal {
+//    let species: String
+//    init?(species: String) { // so, ? indicates that this init might fail and if fail returns nil, and if succeed then return an optional instance
+//        if species.isEmpty {
+//            return nil
+//        }
+//        self.species = species
+//    }
+//}
+//
+//var animal = Animal(species: "")
+//
+//animal?.species ?? "No Cat"
+//
+//// Propagation of Failable Init
+//
+//class Product {
+//    let name: String
+//    init?(name: String) {
+//        if name.isEmpty { return nil }
+//        self.name = name
+//    }
+//}
+//
+//class CartItem: Product {
+//    let quantity: Int
+//    init?(name: String, quantity: Int) {
+//        if quantity < 1 { return nil }
+//        self.quantity = quantity
+//        super.init(name: name)
+//    }
+//}
+//
+//var item = CartItem(name: "Amish", quantity: 10) // Here returns CartItem
+//item?.name
+//item?.quantity
+//
+//print("----")
+//
+//var item2 = CartItem(name: "Amish", quantity: 0) // Here returns nil
+//item2?.name ?? "NIL" // As Cart init failed so, product init also failed
+//item2?.quantity ?? 0
+//
+//print("----")
+//
+//var item3 = CartItem(name: "", quantity: 10) // Here returns nil
+//item3?.name ?? "NIL" // As Product init failed so, cart one also failed even though it succeeded its check
+//item3?.quantity ?? 0
+
+class LibraryItem {
+    var catalogNumber: String
+    
+    required init(catalogNumber: String) {
+        self.catalogNumber = catalogNumber
+        // Additional initialization code can go here.
     }
 }
 
-var animal = Animal(species: "")
-
-animal?.species ?? "No Cat"
-
-// Propagation of Failable Init
-
-class Product {
-    let name: String
-    init?(name: String) {
-        if name.isEmpty { return nil }
-        self.name = name
+class Book: LibraryItem {
+    var author: String
+    
+    required init(catalogNumber: String) {
+        super.init(catalogNumber: catalogNumber)
+        // Further initialization specific to Book can go here.
     }
+    
+     init(catalogNumber: String, author: String) {
+           self.author = author
+           super.init(catalogNumber: catalogNumber)
+           // Further initialization specific to Book can go here.
+       }
 }
 
-class CartItem: Product {
-    let quantity: Int
-    init?(name: String, quantity: Int) {
-        if quantity < 1 { return nil }
-        self.quantity = quantity
-        super.init(name: name)
-    }
-}
-
-var item = CartItem(name: "Amish", quantity: 10) // Here returns CartItem
-item?.name
-item?.quantity
-
-print("----")
-
-var item2 = CartItem(name: "Amish", quantity: 0) // Here returns nil
-item2?.name ?? "NIL" // As Cart init failed so, product init also failed
-item2?.quantity ?? 0
-
-print("----")
-
-var item3 = CartItem(name: "", quantity: 10) // Here returns nil
-item3?.name ?? "NIL" // As Product init failed so, cart one also failed even though it succeeded its check
-item3?.quantity ?? 0
-
+var b = Book(catalogNumber: "a", author: "22")
