@@ -1,5 +1,34 @@
 import Foundation
 
+// Initializer delegation
+
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Point {
+    var x = 0.0, y = 0.0
+}
+
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    init() {}
+    init(origin: Point, size: Size) {
+        self.origin = origin
+        self.size = size
+    }
+    init(center: Point, size: Size) {
+        let originX = center.x - (size.width / 2)
+        let originY = center.y - (size.height / 2)
+//        self.origin = origin
+//        self.size = size
+        self.init(origin: Point(x: originX, y: originY), size: size)
+    }
+}
+var rect = Rect(center: Point(x: 10, y: 10), size: Size(width: 10.0, height: 10.0))
+rect.origin
+rect.size
+// Above, in third init we calculate and then set store property value, no we could have done again the same that was done in second init, it would have worked but duplication of code, so we call the above init.
 // Designated and Convinence Init's
 
 /*
