@@ -16,5 +16,6 @@
         <page name='13. Initialization'/>
         <page name='14. Denitialization'/>
         <page name='15. Optional Chaining'/>
+        <page name='16. Error Handling'/>
     </pages>
 </playground>
