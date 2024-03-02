@@ -18,5 +18,6 @@
         <page name='15. Optional Chaining'/>
         <page name='16. Error Handling'/>
         <page name='17. Type Casting'/>
+        <page name='18. Nested Types'/>
     </pages>
 </playground>
