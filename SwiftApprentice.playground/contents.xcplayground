@@ -19,5 +19,6 @@
         <page name='16. Error Handling'/>
         <page name='17. Type Casting'/>
         <page name='18. Nested Types'/>
+        <page name='19. Extensions'/>
     </pages>
 </playground>
