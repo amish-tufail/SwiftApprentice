@@ -2,9 +2,9 @@ import Foundation
 
 // Syntax
 
-extension SomeType {
-    // new functionality to add to SomeType goes here
-}
+//extension SomeType {
+//    // new functionality to add to SomeType goes here
+//}
 
 // Can extend to conform to protocols
 //extension SomeType: ObservableObject {
