@@ -20,5 +20,7 @@
         <page name='17. Type Casting'/>
         <page name='18. Nested Types'/>
         <page name='19. Extensions'/>
+        <page name='20. Protocols'/>
+        <page name='21. Generics'/>
     </pages>
 </playground>
